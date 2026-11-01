@@ -10,6 +10,14 @@ Contributors add user-facing entries under `[Unreleased]` in the same PR. Mainta
 
 ### Added
 
+### Changed
+
+### Fixed
+
+## [0.6.1] - 2026-11-01
+
+### Added
+
 - **Category (`networking`):** Introduced new `networking` category (`skills/networking/`), category documentation hub (`docs/skills/networking/README.md`), `cat: networking` issue/PR label, and category dropdown option in the skill proposal template ([#437](https://github.com/ARPAHLS/skillware/issues/437)).
 - **Skill (`networking/geo_ip_rotator` v0.1.0):** Geographic egress proxy routing, multi-region web inspection, and anti-blocking gateway for autonomous AI agents. Features targeted egress routing (`fetch_via_geo`), concurrent multi-region market inspection with pricing/currency/redirect delta analysis (`compare_regions`), pre-flight exit node probing (`resolve_egress`), multi-client proxy context emission (`get_proxy_context`), strict pre-flight SSRF containment on all endpoints and redirect hops, pluggable commercial/private proxy formatting adapters (BrightData, Oxylabs, Smartproxy, IPRoyal, generic), locale-appropriate HTTP header synthesis, enterprise data sovereignty compliance auditing with SHA-256 cryptographic receipts, and deterministic offline mock simulation ([#437](https://github.com/ARPAHLS/skillware/issues/437)).
 - **Examples & Harness:** Added standalone runnable demo script `examples/geo_ip_rotator_demo.py` with CI smoke coverage in `tests/test_examples_smoke.py`, and multi-jurisdiction simulation suite `tests/skills/networking/test_geo_ip_rotator_simulations.py`.
