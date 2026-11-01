@@ -244,7 +244,7 @@ Commits that touched this skill bundle or its catalog page ([`networking/geo_ip_
 
 | Commit | Description | Date | Version | Contributors |
 | :--- | :--- | :--- | :--- | :--- |
-| [`bc9f072`](https://github.com/ARPAHLS/skillware/commit/bc9f07237) | feat(networking): add geo_ip_rotator skill and networking category (#437) | 31 Oct 2026 | `0.1.0` | [@bd-c3](https://github.com/bd-c3) |
+| [`ca33c8a`](https://github.com/ARPAHLS/skillware/commit/ca33c8a760) | feat(networking): add geo_ip_rotator skill and networking category (#437) (#464) | 1 Nov 2026 | `0.1.0` | [@bd-c3](https://github.com/bd-c3) |
 <!-- skill-history:end -->
 
 ## Enterprise disclaimer
