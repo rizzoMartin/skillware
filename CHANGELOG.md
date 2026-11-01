@@ -10,6 +10,8 @@ Contributors add user-facing entries under `[Unreleased]` in the same PR. Mainta
 
 ### Added
 
+- **Skill (`data_engineering/unit_normalizer` v0.1.0):** Deterministic, dependency-free unit normalization for agent pipelines. Converts single values, record batches (`normalize_batch`), and table columns (`normalize_table`) through one `{factor, offset}` table covering temperature without special cases; parses compound strings such as `5 ft 11 in`, `3 1/2 gal`, and `120 km/h` (`parse_quantity`); converts to SI base units (`canonicalize`); treats angles as a first-class dimension; applies SI prefixes case-sensitively against an allowlist; declares ambiguous readings (`ton`, `gal`, `oz`, `pt`, `qt`) with `assumed`, `alternatives`, and `risk_variance` unless locked via `assume`; returns per-record structured error codes without aborting the batch; and bounds large outputs with `compact` ([#167](https://github.com/ARPAHLS/skillware/issues/167)).
+
 ### Changed
 
 ### Fixed
