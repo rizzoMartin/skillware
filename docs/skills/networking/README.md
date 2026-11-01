@@ -10,7 +10,7 @@ This hub is the documentation landing page for Skillware **networking** agent sk
 
 | Skill | ID | Version | Issuer | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **[Geo IP Rotator](geo_ip_rotator.md)** | `networking/geo_ip_rotator` | `0.1.0` (31 Oct 2026) | [@bd-c3](https://github.com/bd-c3) ([@ARPAHLS](https://github.com/ARPAHLS)) | Geographic egress proxy routing, multi-region web inspection, and anti-blocking gateway for AI agents. |
+| **[Geo IP Rotator](geo_ip_rotator.md)** | `networking/geo_ip_rotator` | `0.1.0` (1 Nov 2026) | [@bd-c3](https://github.com/bd-c3) ([@ARPAHLS](https://github.com/ARPAHLS)) | Geographic egress proxy routing, multi-region web inspection, and anti-blocking gateway for AI agents. |
 
 ## Roadmap for the Networking Category
 

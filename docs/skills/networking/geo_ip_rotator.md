@@ -3,7 +3,7 @@
 **ID**: `networking/geo_ip_rotator`  
 **Issuer**: [@bd-c3](https://github.com/bd-c3) ([@ARPAHLS](https://github.com/ARPAHLS))  
 <!-- skill-doc-meta:begin -->
-- **Version**: `0.1.0` — 31 Oct 2026
+- **Version**: `0.1.0` — 1 Nov 2026
 - **Tier**: `core`
 - **Shape**: `middleware`
 - **Target**: `software`

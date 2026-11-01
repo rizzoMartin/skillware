@@ -16,10 +16,10 @@ class _FakeDist:
         self,
         *,
         name: str = "skillware",
-        version: str = "0.6.0",
+        version: str = "0.6.1",
         has_record: bool = True,
         editable: bool = False,
-        dist_dir_name: str = "skillware-0.6.0.dist-info",
+        dist_dir_name: str = "skillware-0.6.1.dist-info",
     ):
         self._name = name
         self._version = version
@@ -84,10 +84,10 @@ def test_get_installed_version_dev_returns_none(monkeypatch):
 def test_get_installed_version_prefers_highest_among_duplicates(monkeypatch):
     dists = [
         _FakeDist(version="0.5.1", dist_dir_name="skillware-0.5.1.dist-info"),
-        _FakeDist(version="0.6.0", dist_dir_name="skillware-0.6.0.dist-info"),
+        _FakeDist(version="0.6.1", dist_dir_name="skillware-0.6.1.dist-info"),
     ]
     _patch_distributions(monkeypatch, dists)
-    assert version_policy.get_installed_version() == Version("0.6.0")
+    assert version_policy.get_installed_version() == Version("0.6.1")
 
 
 def test_get_package_version_display_never_none(monkeypatch):
@@ -107,11 +107,11 @@ def test_get_package_version_display_uses_parsed_version(monkeypatch):
 def test_assess_install_health_ok_single_wheel(monkeypatch):
     _patch_distributions(
         monkeypatch,
-        [_FakeDist(version="0.6.0", has_record=True, editable=False)],
+        [_FakeDist(version="0.6.1", has_record=True, editable=False)],
     )
     report = version_policy.assess_install_health()
     assert report.ok is True
-    assert report.display_version == "0.6.0"
+    assert report.display_version == "0.6.1"
     assert report.issues == []
 
 
@@ -147,10 +147,10 @@ def test_assess_install_health_editable_and_wheel(monkeypatch):
             dist_dir_name="skillware-0.5.1.dist-info",
         ),
         _FakeDist(
-            version="0.6.0",
+            version="0.6.1",
             has_record=True,
             editable=False,
-            dist_dir_name="skillware-0.6.0.dist-info",
+            dist_dir_name="skillware-0.6.1.dist-info",
         ),
     ]
     _patch_distributions(monkeypatch, dists)
@@ -226,13 +226,14 @@ def test_should_emit_only_below_min_unsupported():
     assert version_policy.should_emit_unsupported_advisory(Version("0.5.8")) is False
     assert version_policy.should_emit_unsupported_advisory(Version("0.5.9")) is False
     assert version_policy.should_emit_unsupported_advisory(Version("0.6.0")) is False
+    assert version_policy.should_emit_unsupported_advisory(Version("0.6.1")) is False
 
 
 def test_emit_advisory_silent_for_current_release(monkeypatch, capsys):
     monkeypatch.setattr(
         version_policy.metadata,
         "version",
-        lambda _name: "0.6.0",
+        lambda _name: "0.6.1",
     )
     monkeypatch.setattr(
         version_policy,
@@ -270,6 +271,7 @@ def test_emit_advisory_silent_for_outdated_but_supported_band(monkeypatch, capsy
         "0.5.7",
         "0.5.8",
         "0.5.9",
+        "0.6.0",
     ):
         monkeypatch.setattr(
             version_policy.metadata,
@@ -361,6 +363,6 @@ def test_cli_doctor_install_ok_exit_code(monkeypatch):
     monkeypatch.setattr(
         cli_module,
         "assess_install_health",
-        lambda: version_policy.InstallHealth(ok=True, display_version="0.6.0"),
+        lambda: version_policy.InstallHealth(ok=True, display_version="0.6.1"),
     )
     assert cli_module.cmd_doctor_install() == 0

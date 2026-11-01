@@ -31,6 +31,7 @@ body:
       label: Command or area
       options:
         - skillware (interactive menu)
+        - skillware find
         - skillware list
         - skillware test
         - skillware examples
@@ -88,7 +89,7 @@ body:
     attributes:
       label: Environment
       placeholder: |
-        Windows 11, Python 3.12, skillware 0.6.0
+        Windows 11, Python 3.12, skillware 0.6.1
         Config: ~/.config/skillware/config.yaml and/or .skillware.yaml
     validations:
       required: false
