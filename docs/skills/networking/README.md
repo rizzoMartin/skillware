@@ -12,13 +12,6 @@ This hub is the documentation landing page for Skillware **networking** agent sk
 | :--- | :--- | :--- | :--- | :--- |
 | **[Geo IP Rotator](geo_ip_rotator.md)** | `networking/geo_ip_rotator` | `0.1.0` (1 Nov 2026) | [@bd-c3](https://github.com/bd-c3) ([@ARPAHLS](https://github.com/ARPAHLS)) | Geographic egress proxy routing, multi-region web inspection, and anti-blocking gateway for AI agents. |
 
-## Roadmap for the Networking Category
-
-1. **`networking/geo_ip_rotator` (This Skill):** Egress proxy rotation, multi-region web inspection, and residential/ISP anti-blocking routing.
-2. **`networking/wireguard_tunnel_gate` (Planned):** Ephemeral private WireGuard/Tailscale mesh connectivity for enterprise intranets and VPCs.
-3. **`networking/dns_health_resolver` (Planned):** Split-horizon DNS probing, DNSSEC validation, and DoH (DNS-over-HTTPS) resolution.
-4. **`networking/tls_cert_inspector` (Planned):** Cipher suite auditing, certificate chain verification, and SSL expiry monitoring.
-
 ## Typical host pipelines
 
 - Targeted jurisdiction web retrieval: `networking/geo_ip_rotator` (action `fetch_via_geo`).
